@@ -8,7 +8,7 @@ from e_commerce.models import *
 # NOTE: Aquí personalizamos los campos en el Django Admin.
 
 @admin.register(Comic)
-class Comics(admin.ModelAdmin):
+class ComicsAdmin(admin.ModelAdmin):
     # NOTE: Para seleccionar los campos en la tabla de registros
     list_display = ('marvel_id', 'title', 'stock_qty', 'price')
 
@@ -34,7 +34,7 @@ class Comics(admin.ModelAdmin):
     # pass
     
 @admin.register(WishList)
-class WhisLists(admin.ModelAdmin):
+class WhisListsAdmin(admin.ModelAdmin):
     # NOTE: Para seleccionar los campos en la tabla de registros
     list_display = ('user', 'comic', 'favorite')
 
